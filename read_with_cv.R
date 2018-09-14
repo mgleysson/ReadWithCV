@@ -1,13 +1,13 @@
 library(raster)
 library(png)
 
-# hhhh <- raster("hhhh.grd")
-# hvhv <- raster("hvhv.grd")
-# vvvv <- raster("vvvv.grd")
-
-hhhh <- raster("HHHH.grd")
-hvhv <- raster("HVHV.grd")
-vvvv <- raster("VVVV.grd")
+hhhh <- raster("hhhh.grd")
+hvhv <- raster("hvhv.grd")
+vvvv <- raster("vvvv.grd")
+# 
+# hhhh <- raster("HHHH.grd")
+# hvhv <- raster("HVHV.grd")
+# vvvv <- raster("VVVV.grd")
 
 hhhh <- raster(getValuesBlock(hhhh, nrow = 1, nrows = 1000, ncol = 1, ncols = 1000, format = 'matrix'))
 hvhv <- raster(getValuesBlock(hvhv, nrow = 1, nrows = 1000, ncol = 1, ncols = 1000, format = 'matrix'))
@@ -25,8 +25,8 @@ hvhv_cv <- localFun(hvhv, hvhv, ngb = 3, fun = my_cv)
 vvvv_cv <- localFun(vvvv, vvvv, ngb = 3, fun = my_cv)
 
 
-#nrow <- nrow(hhhh_cv)
-#ncol <- ncol(hhhh_cv)
+nrow <- nrow(hhhh_cv)
+ncol <- ncol(hhhh_cv)
 
 nrow <- 1000
 ncol <- 1000
